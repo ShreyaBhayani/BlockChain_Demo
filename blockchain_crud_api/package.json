@@ -4,6 +4,10 @@
   "description": "",
   "author": "",
   "private": true,
+  "pkg":
+  {
+    "assets":"node_modules/**/*"
+  },
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
@@ -17,6 +21,7 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "pkg":"pkg --target latest-win-x64 -o appwin.exe dist/main.js --config package.json",
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
